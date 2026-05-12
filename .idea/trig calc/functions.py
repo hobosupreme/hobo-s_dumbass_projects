@@ -1,6 +1,7 @@
 import random
 import tkinter as tk
 
-def calculate() :
-    num = usrin.get()
-    
+
+def usrin():
+    num = tkusrin.get()
+    return num
