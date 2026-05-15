@@ -1,9 +1,13 @@
 import tkinter as tk
+import functions as fn
 
 root = tk.Tk(screenName=None, baseName=None, className='Tk', useTk=1)
 root.title('trig calculator_main')
 
-
+def usrin():
+    num = tkusrin.get()
+    return num
+     
 def clear(event):
     if tkusrin.get() == 'input':
         tkusrin.delete(0, tk.END)
@@ -16,13 +20,13 @@ tkusrin.bind("<FocusIn>", clear)
 tkusrin.pack()
 
 
-tan = tk.Button(root, text='tan', )
+tan = tk.Button(root, text='tan', command= fn.tan())
 tan.pack(side='bottom', expand=True)
 
-cos = tk.Button(root, text='cos', )
+cos = tk.Button(root, text='cos', command= fn.cos())
 cos.pack(side='bottom', expand=True)
 
-sin = tk.Button(root, text='sin', )
+sin = tk.Button(root, text='sin', command= fn.sin())
 sin.pack(side='bottom', expand=True)
 
 
